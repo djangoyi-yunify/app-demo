@@ -11,7 +11,7 @@
          "container":{
             "type":"kvm",
             "zone":"sh1",
-            "image":"img-6vwcxv2p"
+            "image":"img-bcvqxzxm"
          },
          "user_access": true,
          "instance_class":{{cluster.replica.instance_class}},
@@ -44,5 +44,9 @@
 				"cmd": "/opt/mongodb/app/scripts/node-destroy.sh"
 			}
 		}
-	}]
+	}],
+   "env": {
+        "rsname": {{env.rsname}},
+        "port": {{env.port}}
+   }
 }

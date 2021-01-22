@@ -32,8 +32,8 @@
                 },
                 {
                     "key": "replica",
-                    "description": "size of replicaset member node properties",
-                    "label": "Replicaset Member Node Size",
+                    "description": "size of replicaset member node",
+                    "label": "Replicaset Member",
                     "type": "array",
                     "properties": [
                         {
@@ -100,6 +100,29 @@
                             "required": "yes"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "key": "env",
+            "description": "Application configuration properties",
+            "type": "array",
+            "properties": [
+                {
+                    "key": "rsname",
+                    "label": "Replica set Name",
+                    "description": "Replica set Name",
+                    "type": "string",
+                    "default": "rs0",
+                    "required": "yes"
+                },
+                {
+                    "key": "port",
+                    "label": "listening port",
+                    "description": "listening port",
+                    "type": "integer",
+                    "default": 27017,
+                    "required": "yes"
                 }
             ]
         }

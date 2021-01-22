@@ -1,5 +1,11 @@
+processManagement:
+    fork: true
 net:
     bindIp: {{getv "/host/instance_id"}},127.0.0.1
-    port: 27017
+    port: {{getv "/env/port"}}
 storage:
     dbPath: /data/db
+systemLog:
+    destination: syslog
+replication:
+    replSetName: {{getv "/env/rsname"}}
