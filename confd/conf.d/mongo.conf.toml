@@ -1,0 +1,6 @@
+[template]
+src = "mongo.conf.tmpl"
+dest = "/opt/mongodb/app/conf/mongo.conf"
+keys = [
+  "/",
+]
