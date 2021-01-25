@@ -1,0 +1,6 @@
+[template]
+src = "replica.info.tmpl"
+dest = "/opt/mongodb/app/conf/replica.info"
+keys = [
+  "/",
+]

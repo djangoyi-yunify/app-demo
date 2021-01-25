@@ -1,7 +1,7 @@
 processManagement:
     fork: true
 net:
-    bindIp: {{getv "/host/instance_id"}},127.0.0.1
+    bindIp: {{getv "/host/ip"}},127.0.0.1
     port: {{getv "/env/port"}}
 storage:
     dbPath: /data/db
