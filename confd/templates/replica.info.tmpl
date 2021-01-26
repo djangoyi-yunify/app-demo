@@ -1,2 +1,5 @@
+rsname={{getv "/env/rsname"}}
+port={{getv "/env/port"}}
+
 mysid={{getv "/host/sid"}}
-nodelist=({{range $dir := lsdir "/hosts/replica"}}{{$sid := printf "/hosts/replica/%s/sid" $dir}}{{$ip := printf "/hosts/replica/%s/ip" $dir}}{{getv $sid}}|{{getv $ip}} {{end}})
+nodelist=({{range $dir := lsdir "/hosts/replica"}}{{$sid := printf "/hosts/replica/%s/sid" $dir}}{{$ip := printf "/hosts/replica/%s/ip" $dir}}'{{getv $sid}}|{{getv $ip}}' {{end}})
